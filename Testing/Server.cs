@@ -16,13 +16,13 @@ namespace Testing
                     new Player(4, "Reyan"),
                     new Player(5, "Samoul"),
                 ];
-            Rooms = new List<Room>();
-            /*Rooms =
+            //Rooms = new List<Room>();
+            Rooms =
                 [
                     new Room(10, Players[0]),
                     new Room(20, Players[1]),
                     new Room(30, Players[2], Players[3], Players, RoomState.InGame)
-                ];*/
+                ];
         }
 
         public void NewPlayerConnected(Player p)
