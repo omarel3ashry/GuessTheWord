@@ -112,6 +112,7 @@
             newPlayerBtn.TabIndex = 5;
             newPlayerBtn.Text = "New Player";
             newPlayerBtn.UseVisualStyleBackColor = true;
+            newPlayerBtn.Click += newPlayerBtn_Click;
             // 
             // createRoomBtn
             // 
@@ -121,6 +122,7 @@
             createRoomBtn.TabIndex = 7;
             createRoomBtn.Text = "Create Room";
             createRoomBtn.UseVisualStyleBackColor = true;
+            createRoomBtn.Click += createRoomBtn_Click;
             // 
             // createRoomTB
             // 
@@ -137,6 +139,7 @@
             JoinRoomBtn.TabIndex = 9;
             JoinRoomBtn.Text = "Join Room";
             JoinRoomBtn.UseVisualStyleBackColor = true;
+            JoinRoomBtn.Click += JoinRoomBtn_Click;
             // 
             // joinRoomIdTB
             // 
@@ -167,6 +170,7 @@
             watchRoomBtn.TabIndex = 12;
             watchRoomBtn.Text = "Watch Room";
             watchRoomBtn.UseVisualStyleBackColor = true;
+            watchRoomBtn.Click += watchRoomBtn_Click;
             // 
             // watchRoomIdTB
             // 
@@ -190,6 +194,7 @@
             startGameBtn.TabIndex = 15;
             startGameBtn.Text = "Start Game";
             startGameBtn.UseVisualStyleBackColor = true;
+            startGameBtn.Click += startGameBtn_Click;
             // 
             // startRoomIdTB
             // 
@@ -213,6 +218,7 @@
             leaveRoomBtn.TabIndex = 18;
             leaveRoomBtn.Text = "Leave Room";
             leaveRoomBtn.UseVisualStyleBackColor = true;
+            leaveRoomBtn.Click += leaveRoomBtn_Click;
             // 
             // leaveRoomIdTB
             // 
@@ -319,6 +325,7 @@
             refreshBtn.TabIndex = 30;
             refreshBtn.Text = "Refresh";
             refreshBtn.UseVisualStyleBackColor = true;
+            refreshBtn.Click += refreshBtn_Click;
             // 
             // Form1
             // 

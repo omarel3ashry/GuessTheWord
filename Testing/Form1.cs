@@ -49,5 +49,106 @@ namespace Testing
             }
             roomsRichTB.Text = builder.ToString();
         }
+
+        private void newPlayerBtn_Click(object sender, EventArgs e)
+        {
+            Player player = new Player(int.Parse(newPlayerTB.Text), "Rana");
+            server.NewPlayerConnected(player);
+        }
+
+        private void refreshBtn_Click(object sender, EventArgs e)
+        {
+            ShowPlayersData(server.Players);
+            ShowRoomsData(server.Rooms);
+        }
+
+        private void createRoomBtn_Click(object sender, EventArgs e)
+        {
+            foreach (Player player in server.Players)
+            {
+                if (player.Id == int.Parse(createRoomTB.Text))
+                {
+                    server.RequestCreateRoom(player);
+                    MessageBox.Show("Room Created");
+                }
+            }
+        }
+
+        private void JoinRoomBtn_Click(object sender, EventArgs e)
+        {
+            bool rightPlayer = false;
+            Player pl = new Player(1, "Reem");
+            foreach (Player player in server.Players)
+            {
+                if (player.Id == int.Parse(joinPlayerIdTB.Text))
+                {
+                    pl = player;
+                    rightPlayer = true;
+                }
+            }
+
+            bool rightRoom = false;
+            Room ro = new Room(1, pl);
+            foreach (Room room in server.Rooms)
+            {
+                if (room.RoomId == int.Parse(joinRoomIdTB.Text))
+                {
+                    ro = room;
+                    rightRoom = true;
+                }
+            }
+
+            if (rightRoom && rightPlayer)
+            {
+                server.RequestJoin(pl, ro);
+            }
+        }
+
+        private void watchRoomBtn_Click(object sender, EventArgs e)
+        {
+            bool rightPlayer = false;
+            Player pl = new Player(1, "Reem");
+            foreach (Player player in server.Players)
+            {
+                if (player.Id == int.Parse(watchPlayerIdTB.Text))
+                {
+                    pl = player;
+                    rightPlayer = true;
+                }
+            }
+
+            bool rightRoom = false;
+            Room ro = new Room(1, pl);
+            foreach (Room room in server.Rooms)
+            {
+                if (room.RoomId == int.Parse(watchRoomIdTB.Text))
+                {
+                    ro = room;
+                    rightRoom = true;
+                }
+            }
+
+            if (rightRoom && rightPlayer)
+            {
+                server.RequestWatch(pl, ro);
+            }
+        }
+
+        private void startGameBtn_Click(object sender, EventArgs e)
+        {
+            foreach (Player player in server.Players)
+            {
+                if (player.Id == int.Parse(startPlayerIdTB.Text) && player.RoomId == int.Parse(startRoomIdTB.Text)
+                    && player.State == PlayerState.One)
+                {
+                    server.RequestStartGame(player);
+                }
+            }
+        }
+
+        private void leaveRoomBtn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
