@@ -148,7 +148,13 @@ namespace Testing
 
         private void leaveRoomBtn_Click(object sender, EventArgs e)
         {
-
+            foreach (Player player in server.Players)
+            {
+                if (player.Id == int.Parse(leavePlayerIdTB.Text) && player.RoomId == int.Parse(leaveRoomIdTB.Text))
+                {
+                    server.RequestLeave(player);
+                }
+            }
         }
     }
 }

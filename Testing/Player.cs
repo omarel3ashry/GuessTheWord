@@ -9,6 +9,7 @@ namespace Testing
         public string Name { get; set; }
         public PlayerState State { get; set; }
         public int RoomId { get; set; }
+        public int Score { get; set; }
 
         // just for testing
         public Server DummyServer;
@@ -19,6 +20,7 @@ namespace Testing
             Name = name;
             State = PlayerState.Idle;
             RoomId = 0;
+            Score = 0;
         }
     }
 }

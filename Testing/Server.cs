@@ -108,6 +108,77 @@ namespace Testing
         {
             // check if the room exists and he is a member of the room if he is p2 make p1 winner and kick p2,
             // if he is p1 make p2 winner and kick everyone and remove the room
+            if(p.State == PlayerState.Two)
+            {
+                foreach (Room room in Rooms)
+                {
+                    if(room.RoomId == p.RoomId) 
+                    {
+                        if (room.State == RoomState.InGame)
+                        {
+                            foreach (Player player in Players)
+                            {
+                                if (player.Id == room.PlayerOne.Id)
+                                {
+                                    player.Score++;
+                                }
+                            }
+                        }
+                        room.State = RoomState.Waiting;
+                        room.PlayerTwo = null;
+                        List<Player> Play = [null];
+                        foreach (Player spec in room.Spectators)
+                        {
+                            spec.State = PlayerState.Idle;
+                            spec.RoomId = 0;
+
+                            Play.Add(spec);
+                        }
+                        foreach(Player pl in Play)
+                        {
+                            room.Spectators.Remove(pl);
+                        }
+                    }
+                }
+
+                p.State = PlayerState.Idle;
+                p.RoomId = 0;
+            }
+            else if(p.State == PlayerState.One)
+            {
+                Room r = new Room(p.RoomId, p);
+                foreach (Room room in Rooms)
+                {
+                    if (room.RoomId == p.RoomId)
+                    {
+                        if (room.PlayerTwo != null)
+                        {
+                            foreach (Player player in Players)
+                            {
+                                if (player.Id == room.PlayerTwo.Id)
+                                {
+                                    player.State = PlayerState.Idle;
+                                    if(room.State == RoomState.InGame)
+                                    {
+                                        player.Score++;
+                                    }
+                                    player.RoomId = 0;
+                                }
+                            }
+                        }
+                        r = room;
+                    }
+                }
+                foreach(Player spec in r.Spectators)
+                {
+                    spec.State = PlayerState.Idle;
+                    spec.RoomId = 0;
+                }
+                
+                Rooms.Remove(r);
+                p.State= PlayerState.Idle;
+                p.RoomId= 0;
+            }
         }
 
     }
