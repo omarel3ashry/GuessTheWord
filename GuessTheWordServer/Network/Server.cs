@@ -104,6 +104,7 @@ namespace GuessTheWordServer
             if (OnMessageRecieved != null)
                 OnMessageRecieved(ip, "Disconnected");
             _clients.Remove(tcpClient);
+            RemovePlayer(player);   
         }
 
         private void AddNewPlayer(Player p, TcpClient tcpClient)
@@ -125,6 +126,13 @@ namespace GuessTheWordServer
                 Console.WriteLine(response.ToJsonString());
             }
 
+        }
+        private void RemovePlayer(Player p)
+        {
+            if (_players.ContainsKey(p.Id))
+            {
+                _players.Remove(p.Id);
+            }
         }
     }
 }

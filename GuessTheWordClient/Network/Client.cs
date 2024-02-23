@@ -39,6 +39,8 @@ namespace GuessTheWordClient
             _worker = new BackgroundWorker();
             _worker.WorkerSupportsCancellation = true;
             _worker.DoWork += WorkerDoWork;
+
+            Application.ApplicationExit += (s,e) => Disconnect();
         }
 
         public void Connect() { _worker.RunWorkerAsync(); }

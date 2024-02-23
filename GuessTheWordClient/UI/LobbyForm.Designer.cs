@@ -169,7 +169,7 @@
             nameLabel.AutoSize = true;
             nameLabel.BackColor = Color.FromArgb(203, 177, 136);
             nameLabel.Font = new Font("Segoe Print", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            nameLabel.Location = new Point(90, 11);
+            nameLabel.Location = new Point(90, 26);
             nameLabel.Name = "nameLabel";
             nameLabel.Size = new Size(68, 30);
             nameLabel.TabIndex = 2;

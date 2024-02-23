@@ -219,6 +219,9 @@ namespace GuessTheWordClient
         {
             chatRichTB.AppendText(msg + "\n");
         }
+        
+
+
     }
 }
 

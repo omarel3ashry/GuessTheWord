@@ -55,7 +55,7 @@ namespace GuessTheWordServer
                         pair.Value.Client.GetStream().Write(response.Serialize());
                         pair.Value.Client.GetStream().Flush();
                     }
-                    catch (IOException e)
+                    catch (Exception e)
                     {
                         Console.WriteLine("-----\n" + e.Message + "\n-----");
                     }

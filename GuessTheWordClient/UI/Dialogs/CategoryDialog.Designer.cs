@@ -160,7 +160,7 @@
             sportsBtn.FillColor = Color.FromArgb(94, 6, 116);
             sportsBtn.Font = new Font("Segoe Print", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             sportsBtn.ForeColor = Color.White;
-            sportsBtn.Location = new Point(23, 167);
+            sportsBtn.Location = new Point(23, 166);
             sportsBtn.Name = "sportsBtn";
             sportsBtn.ShadowDecoration.CustomizableEdges = customizableEdges4;
             sportsBtn.Size = new Size(141, 52);
