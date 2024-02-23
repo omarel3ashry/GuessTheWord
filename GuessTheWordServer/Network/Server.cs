@@ -1,9 +1,7 @@
 ﻿using System.Net;
 using System.Net.Sockets;
 
-/*
-* @author 3ashry
-*/
+
 
 namespace GuessTheWordServer
 {
@@ -33,17 +31,7 @@ namespace GuessTheWordServer
             _rooms = new Dictionary<ushort, Room>();
             _controlRoom = new ControlRoom(_rooms);
             _random = new Random();
-            //_rooms.Add(22, new Room(22, new Player(IPAddress.Parse("192.168.1.22"), "Wan")));
-            /*  _rooms.Add(33, new Room(33,
-                             new Player("Man#33", "Man", PlayerState.One, 33, 3, 0),
-                             new Player("Man#33", "Man", PlayerState.One, 33, 3, 0),
-                             new List<Player> {
-                                              new Player("Man#33","Man",PlayerState.One,33,3,0),
-                                              new Player("Nan#33","Man",PlayerState.One,33,3,0),
-                                              new Player("Fan#33","Man",PlayerState.One,33,3,0),
-                                              new Player("Dan#33","Man",PlayerState.One,33,3,0)
-                                               },
-                             RoomState.Idle, new Game("dive")));*/
+           
         }
 
         public void FireServer()
@@ -60,8 +48,7 @@ namespace GuessTheWordServer
 
         private void StartServer()
         {
-            //using TcpListener _listener = new TcpListener(IPAddress.Loopback, 1414);
-            using TcpListener _listener = new TcpListener(IPAddress.Parse("127.0.0.1"), 1414);
+            using TcpListener _listener = new TcpListener(IPAddress.Loopback, 1414);
             _listener.Start();
             if (OnConnectionChange != null)
                 OnConnectionChange($"Listening...");
@@ -90,15 +77,13 @@ namespace GuessTheWordServer
                 OnMessageRecieved(ip, initialRequest.ToJsonString());
             Player player = new Player(initialRequest.PlayerId, tcpClient);
             AddNewPlayer(player, tcpClient);
-            // TODO: lock _player (race condition)
-            //_players.Add(initialRequest.PlayerId, player);
+           
             while ((received = stream.Read(buffer)) > 0)
             {
                 var request = buffer.DeserializeReqMsg();
                 if (OnMessageRecieved != null)
                     OnMessageRecieved(ip, request.ToJsonString());
-                //var response = new ResponseMessage(MessageType.CreateRoomResponse, 1, 50, null);
-                //SendResponse(stream,response);
+               
                 RequestSwitcher(request);
             }
             if (OnMessageRecieved != null)
@@ -116,7 +101,6 @@ namespace GuessTheWordServer
                 tcpClient.GetStream().Write(response.Serialize());
                 tcpClient.GetStream().Flush();
                 Console.WriteLine(response.ToJsonString());
-                //BroadcastToIdle();
             }
             else
             {

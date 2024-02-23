@@ -1,6 +1,4 @@
-﻿/*
-* @author 3ashry
-*/
+﻿
 
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
