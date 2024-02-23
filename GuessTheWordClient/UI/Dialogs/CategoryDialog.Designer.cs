@@ -28,24 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CategoryDialog));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             panel1 = new Panel();
             panel3 = new Panel();
             panel6 = new Panel();
+            roundedPicBox2 = new RoundedPicBox();
             foodBtn = new Guna.UI2.WinForms.Guna2Button();
             panel5 = new Panel();
+            roundedPicBox1 = new RoundedPicBox();
             sportsBtn = new Guna.UI2.WinForms.Guna2Button();
             panel4 = new Panel();
+            roundedPicBox3 = new RoundedPicBox();
             animalsBtn = new Guna.UI2.WinForms.Guna2Button();
             closeBtn = new Guna.UI2.WinForms.Guna2CircleButton();
             label2 = new Label();
@@ -56,8 +59,11 @@
             panel1.SuspendLayout();
             panel3.SuspendLayout();
             panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)roundedPicBox2).BeginInit();
             panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)roundedPicBox1).BeginInit();
             panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)roundedPicBox3).BeginInit();
             panel2.SuspendLayout();
             SuspendLayout();
             // 
@@ -88,16 +94,27 @@
             // 
             // panel6
             // 
+            panel6.Controls.Add(roundedPicBox2);
             panel6.Controls.Add(foodBtn);
             panel6.Location = new Point(456, 99);
             panel6.Name = "panel6";
             panel6.Size = new Size(185, 271);
             panel6.TabIndex = 4;
             // 
+            // roundedPicBox2
+            // 
+            roundedPicBox2.Image = (Image)resources.GetObject("roundedPicBox2.Image");
+            roundedPicBox2.Location = new Point(39, 17);
+            roundedPicBox2.Name = "roundedPicBox2";
+            roundedPicBox2.Size = new Size(125, 121);
+            roundedPicBox2.SizeMode = PictureBoxSizeMode.StretchImage;
+            roundedPicBox2.TabIndex = 6;
+            roundedPicBox2.TabStop = false;
+            // 
             // foodBtn
             // 
             foodBtn.BorderRadius = 25;
-            foodBtn.CustomizableEdges = customizableEdges11;
+            foodBtn.CustomizableEdges = customizableEdges1;
             foodBtn.DisabledState.BorderColor = Color.DarkGray;
             foodBtn.DisabledState.CustomBorderColor = Color.DarkGray;
             foodBtn.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -105,9 +122,9 @@
             foodBtn.FillColor = Color.FromArgb(94, 6, 116);
             foodBtn.Font = new Font("Segoe Print", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             foodBtn.ForeColor = Color.White;
-            foodBtn.Location = new Point(23, 163);
+            foodBtn.Location = new Point(23, 167);
             foodBtn.Name = "foodBtn";
-            foodBtn.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            foodBtn.ShadowDecoration.CustomizableEdges = customizableEdges2;
             foodBtn.Size = new Size(141, 52);
             foodBtn.TabIndex = 1;
             foodBtn.Text = "Food";
@@ -115,16 +132,27 @@
             // 
             // panel5
             // 
+            panel5.Controls.Add(roundedPicBox1);
             panel5.Controls.Add(sportsBtn);
             panel5.Location = new Point(239, 99);
             panel5.Name = "panel5";
             panel5.Size = new Size(185, 271);
             panel5.TabIndex = 3;
             // 
+            // roundedPicBox1
+            // 
+            roundedPicBox1.Image = (Image)resources.GetObject("roundedPicBox1.Image");
+            roundedPicBox1.Location = new Point(39, 17);
+            roundedPicBox1.Name = "roundedPicBox1";
+            roundedPicBox1.Size = new Size(125, 121);
+            roundedPicBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            roundedPicBox1.TabIndex = 5;
+            roundedPicBox1.TabStop = false;
+            // 
             // sportsBtn
             // 
             sportsBtn.BorderRadius = 25;
-            sportsBtn.CustomizableEdges = customizableEdges13;
+            sportsBtn.CustomizableEdges = customizableEdges3;
             sportsBtn.DisabledState.BorderColor = Color.DarkGray;
             sportsBtn.DisabledState.CustomBorderColor = Color.DarkGray;
             sportsBtn.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -132,9 +160,9 @@
             sportsBtn.FillColor = Color.FromArgb(94, 6, 116);
             sportsBtn.Font = new Font("Segoe Print", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             sportsBtn.ForeColor = Color.White;
-            sportsBtn.Location = new Point(23, 168);
+            sportsBtn.Location = new Point(23, 167);
             sportsBtn.Name = "sportsBtn";
-            sportsBtn.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            sportsBtn.ShadowDecoration.CustomizableEdges = customizableEdges4;
             sportsBtn.Size = new Size(141, 52);
             sportsBtn.TabIndex = 1;
             sportsBtn.Text = "Sports";
@@ -142,16 +170,27 @@
             // 
             // panel4
             // 
+            panel4.Controls.Add(roundedPicBox3);
             panel4.Controls.Add(animalsBtn);
             panel4.Location = new Point(30, 99);
             panel4.Name = "panel4";
             panel4.Size = new Size(185, 271);
             panel4.TabIndex = 2;
             // 
+            // roundedPicBox3
+            // 
+            roundedPicBox3.Image = (Image)resources.GetObject("roundedPicBox3.Image");
+            roundedPicBox3.Location = new Point(34, 17);
+            roundedPicBox3.Name = "roundedPicBox3";
+            roundedPicBox3.Size = new Size(125, 121);
+            roundedPicBox3.SizeMode = PictureBoxSizeMode.StretchImage;
+            roundedPicBox3.TabIndex = 4;
+            roundedPicBox3.TabStop = false;
+            // 
             // animalsBtn
             // 
             animalsBtn.BorderRadius = 25;
-            animalsBtn.CustomizableEdges = customizableEdges15;
+            animalsBtn.CustomizableEdges = customizableEdges5;
             animalsBtn.DisabledState.BorderColor = Color.DarkGray;
             animalsBtn.DisabledState.CustomBorderColor = Color.DarkGray;
             animalsBtn.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -161,7 +200,7 @@
             animalsBtn.ForeColor = Color.White;
             animalsBtn.Location = new Point(23, 165);
             animalsBtn.Name = "animalsBtn";
-            animalsBtn.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            animalsBtn.ShadowDecoration.CustomizableEdges = customizableEdges6;
             animalsBtn.Size = new Size(141, 52);
             animalsBtn.TabIndex = 1;
             animalsBtn.Text = "Animals";
@@ -180,7 +219,7 @@
             closeBtn.ForeColor = Color.White;
             closeBtn.Location = new Point(591, -4);
             closeBtn.Name = "closeBtn";
-            closeBtn.ShadowDecoration.CustomizableEdges = customizableEdges17;
+            closeBtn.ShadowDecoration.CustomizableEdges = customizableEdges7;
             closeBtn.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             closeBtn.Size = new Size(64, 63);
             closeBtn.TabIndex = 1;
@@ -208,7 +247,7 @@
             // guna2Button1
             // 
             guna2Button1.BorderRadius = 25;
-            guna2Button1.CustomizableEdges = customizableEdges18;
+            guna2Button1.CustomizableEdges = customizableEdges8;
             guna2Button1.DisabledState.BorderColor = Color.DarkGray;
             guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
             guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -218,7 +257,7 @@
             guna2Button1.ForeColor = Color.White;
             guna2Button1.Location = new Point(23, 138);
             guna2Button1.Name = "guna2Button1";
-            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges19;
+            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges9;
             guna2Button1.Size = new Size(141, 52);
             guna2Button1.TabIndex = 1;
             guna2Button1.Text = "Animals";
@@ -236,7 +275,7 @@
             guna2CircleButton1.ForeColor = Color.White;
             guna2CircleButton1.Location = new Point(591, -4);
             guna2CircleButton1.Name = "guna2CircleButton1";
-            guna2CircleButton1.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            guna2CircleButton1.ShadowDecoration.CustomizableEdges = customizableEdges10;
             guna2CircleButton1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             guna2CircleButton1.Size = new Size(64, 63);
             guna2CircleButton1.TabIndex = 1;
@@ -272,8 +311,11 @@
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
             panel6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)roundedPicBox2).EndInit();
             panel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)roundedPicBox1).EndInit();
             panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)roundedPicBox3).EndInit();
             panel2.ResumeLayout(false);
             ResumeLayout(false);
         }
@@ -298,5 +340,8 @@
         private Guna.UI2.WinForms.Guna2CircleButton closeBtn;
         private Label label2;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private RoundedPicBox roundedPicBox3;
+        private RoundedPicBox roundedPicBox1;
+        private RoundedPicBox roundedPicBox2;
     }
 }

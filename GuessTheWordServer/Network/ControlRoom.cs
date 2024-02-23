@@ -120,25 +120,32 @@ namespace GuessTheWordServer
         public void NotifyMembersAboutWatcher(string newWatcherId, ushort roomId)
         {
             var response = new ResponseMessage(MessageType.NewWatcherNotification, 1, roomId, "", _rooms);
-            Room room = _rooms[roomId];
-            try
+            Room? room;
+            if (_rooms.TryGetValue(roomId, out room))
             {
-                room.PlayerOne.Client.GetStream().Write(response.Serialize());
-                room.PlayerOne.Client.GetStream().Flush();
-                room.PlayerTwo!.Client.GetStream().Write(response.Serialize());
-                room.PlayerTwo.Client.GetStream().Flush();
-                foreach (var player in room.Spectators)
+                if (room.PlayerOne != null && room.PlayerTwo != null)
                 {
-                    if (player.Id != newWatcherId)
+                    try
                     {
-                        player.Client.GetStream().Write(response.Serialize());
-                        player.Client.GetStream().Flush();
+                        room.PlayerOne.Client.GetStream().Write(response.Serialize());
+                        room.PlayerOne.Client.GetStream().Flush();
+                        room.PlayerTwo!.Client.GetStream().Write(response.Serialize());
+                        room.PlayerTwo.Client.GetStream().Flush();
+                        foreach (var player in room.Spectators)
+                        {
+                            if (player.Id != newWatcherId)
+                            {
+                                player.Client.GetStream().Write(response.Serialize());
+                                player.Client.GetStream().Flush();
+                            }
+                        }
+                    }
+                    catch (InvalidOperationException e)
+                    {
+                        Debug.WriteLine(e.Message);
                     }
                 }
-            }
-            catch (InvalidOperationException e)
-            {
-                Debug.WriteLine(e.Message);
+
             }
         }
 
