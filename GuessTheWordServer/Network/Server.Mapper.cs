@@ -2,9 +2,6 @@
 using System.Net.Sockets;
 using System.Text;
 
-/*
-* @author 3ashry
-*/
 
 namespace GuessTheWordServer
 {

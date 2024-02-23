@@ -1,6 +1,4 @@
-﻿/*
-* @author 3ashry
-*/
+﻿
 
 using System.Text;
 using System.Text.Json.Serialization;

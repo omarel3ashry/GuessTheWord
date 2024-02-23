@@ -1,6 +1,4 @@
-﻿/*
-* @author 3ashry
-*/
+﻿
 
 namespace GuessTheWordClient
 {

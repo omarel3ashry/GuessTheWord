@@ -4,9 +4,6 @@ using System.Net;
 using System.Net.Sockets;
 using System.Xml.Linq;
 
-/*
-* @author 3ashry
-*/
 
 namespace GuessTheWordClient
 {
@@ -32,8 +29,7 @@ namespace GuessTheWordClient
         public Client(IPAddress iPAddress, int port)
         {
 
-            //IPAddress = iPAddress;
-            IPAddress = IPAddress.Parse("127.0.0.1");
+            IPAddress = iPAddress;
 
             Port = port;
             _worker = new BackgroundWorker();

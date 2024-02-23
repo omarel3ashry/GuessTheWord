@@ -1,7 +1,4 @@
-﻿/*
-* @author 3ashry
-*/
-
+﻿
 namespace GuessTheWordClient
 {
     internal static class Util
