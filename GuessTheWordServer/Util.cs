@@ -26,7 +26,7 @@ namespace GuessTheWordServer
                     selectedChar = reader.ReadChar();
                     category = reader.ReadUInt16();
                 }
-                return new RequestMessage(msgType, playerId,msg, roomId, selectedChar, category);
+                return new RequestMessage(msgType, playerId, msg, roomId, selectedChar, category);
             }
         }
 

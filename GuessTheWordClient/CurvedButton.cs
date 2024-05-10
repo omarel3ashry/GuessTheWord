@@ -1,15 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using System.Windows.Forms;
-using System.Drawing;
+﻿using System.ComponentModel;
 using System.Drawing.Drawing2D;
-using System.ComponentModel;
 
-namespace BUTTONXX.XXCONTROLS  
+namespace BUTTONXX.XXCONTROLS
 {
     public class CurvedButton : Button
     {
@@ -64,7 +56,7 @@ namespace BUTTONXX.XXCONTROLS
             get { return this.ForeColor; }
             set { this.ForeColor = value; }
         }
-        
+
         public CurvedButton()
         {
             this.FlatStyle = FlatStyle.Flat;
@@ -75,7 +67,7 @@ namespace BUTTONXX.XXCONTROLS
             this.Resize += new EventHandler(Button_Resize);
         }
 
-       
+
         //Methods
         private GraphicsPath GetFigurePath(Rectangle rect, float radius)
         {

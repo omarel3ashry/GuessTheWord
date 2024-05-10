@@ -117,7 +117,7 @@ namespace GuessTheWordClient
                     }
                     else p2 = null;
 
-                    string[] spec = reader.ReadString().Split(',',StringSplitOptions.RemoveEmptyEntries);
+                    string[] spec = reader.ReadString().Split(',', StringSplitOptions.RemoveEmptyEntries);
                     spectators = new List<string>(spec);
                     state = (RoomState)reader.ReadUInt16();
                     ushort bufferSize = reader.ReadUInt16();

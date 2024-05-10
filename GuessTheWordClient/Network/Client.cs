@@ -2,7 +2,6 @@
 using System.Diagnostics;
 using System.Net;
 using System.Net.Sockets;
-using System.Xml.Linq;
 
 
 namespace GuessTheWordClient
@@ -36,7 +35,7 @@ namespace GuessTheWordClient
             _worker.WorkerSupportsCancellation = true;
             _worker.DoWork += WorkerDoWork;
 
-            Application.ApplicationExit += (s,e) => Disconnect();
+            Application.ApplicationExit += (s, e) => Disconnect();
         }
 
         public void Connect() { _worker.RunWorkerAsync(); }

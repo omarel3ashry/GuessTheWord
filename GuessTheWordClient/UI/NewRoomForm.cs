@@ -246,14 +246,14 @@ namespace GuessTheWordClient
                     if (winnerDialog.DialogResult == DialogResult.OK)
                     {
                         Debug.WriteLine("Winner DloagResult OK");
-                        request = new RequestMessage(MessageType.AcceptPlayAgainRequest, _client.ThePlayer.Id,"", _room.RoomId, '\0', 0);
+                        request = new RequestMessage(MessageType.AcceptPlayAgainRequest, _client.ThePlayer.Id, "", _room.RoomId, '\0', 0);
                         statusBarBtn.Text = $"Waiting For Player {loser} Response";
                         _client.SendRequest(request);
                     }
                     else if (winnerDialog.DialogResult == DialogResult.Cancel)
                     {
                         Debug.WriteLine("Winner DloagResult Cancel");
-                        request = new RequestMessage(MessageType.RefusePlayAgainRequest, _client.ThePlayer.Id,"", _room.RoomId, '\0', 0);
+                        request = new RequestMessage(MessageType.RefusePlayAgainRequest, _client.ThePlayer.Id, "", _room.RoomId, '\0', 0);
                         _client.SendRequest(request);
                     }
 
@@ -278,14 +278,14 @@ namespace GuessTheWordClient
                     if (result == DialogResult.OK)
                     {
                         Debug.WriteLine("Loser DloagResult OK");
-                        request = new RequestMessage(MessageType.AcceptPlayAgainRequest, _client.ThePlayer.Id,"", _room.RoomId, '\0', 0);
+                        request = new RequestMessage(MessageType.AcceptPlayAgainRequest, _client.ThePlayer.Id, "", _room.RoomId, '\0', 0);
                         statusBarBtn.Text = $"Waiting For Player {winner} Response";
                         _client.SendRequest(request);
                     }
                     else if (result == DialogResult.Cancel)
                     {
                         Debug.WriteLine("Loser DloagResult Cancel");
-                        request = new RequestMessage(MessageType.RefusePlayAgainRequest, _client.ThePlayer.Id,"", _room.RoomId, '\0', 0);
+                        request = new RequestMessage(MessageType.RefusePlayAgainRequest, _client.ThePlayer.Id, "", _room.RoomId, '\0', 0);
                         _client.SendRequest(request);
                     }
                 }
