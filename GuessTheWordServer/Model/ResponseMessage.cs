@@ -1,10 +1,4 @@
-﻿
-
-using System.Text;
-using System.Text.Json.Serialization;
-using System.Xml;
-
-namespace GuessTheWordServer
+﻿namespace GuessTheWordServer
 {
     internal class ResponseMessage
     {

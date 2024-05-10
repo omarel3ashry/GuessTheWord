@@ -1,6 +1,5 @@
-﻿using Guna.UI2.WinForms.Suite;
-using Guna.UI2.WinForms;
-using System.Windows.Forms;
+﻿using Guna.UI2.WinForms;
+using Guna.UI2.WinForms.Suite;
 using System.Diagnostics;
 
 namespace GuessTheWordClient
@@ -219,7 +218,7 @@ namespace GuessTheWordClient
         {
             chatRichTB.AppendText(msg + "\n");
         }
-        
+
 
 
     }

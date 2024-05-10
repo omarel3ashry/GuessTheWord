@@ -9,10 +9,10 @@ namespace GuessTheWordClient
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
         (
-            int nLeftRect,    
-            int nTopRect,     
-            int nRightRect,   
-            int nBottomRect,  
+            int nLeftRect,
+            int nTopRect,
+            int nRightRect,
+            int nBottomRect,
             int nWidthEllipse,
             int nHeightEllipse
         );

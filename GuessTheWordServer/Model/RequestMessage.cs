@@ -40,7 +40,7 @@ namespace GuessTheWordServer
         public char SelectedChar { get; set; }
         public ushort Category { get; set; }
 
-        public RequestMessage(MessageType mType, string playerId,string msg) : this(mType, playerId, msg, 0, '0', 0) { }
+        public RequestMessage(MessageType mType, string playerId, string msg) : this(mType, playerId, msg, 0, '0', 0) { }
         public RequestMessage(MessageType mType, string playerId, ushort roomId) : this(mType, playerId, "", roomId, '0', 0) { }
         public RequestMessage(MessageType mType, string playerId, ushort category, ushort roomId = 0) : this(mType, playerId, "", roomId, '0', category) { }
         public RequestMessage(MessageType mType, string playerId, string msg, ushort roomId, char selectedChar, ushort category)

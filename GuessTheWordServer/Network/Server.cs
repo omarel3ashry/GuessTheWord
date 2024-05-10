@@ -31,7 +31,7 @@ namespace GuessTheWordServer
             _rooms = new Dictionary<ushort, Room>();
             _controlRoom = new ControlRoom(_rooms);
             _random = new Random();
-           
+
         }
 
         public void FireServer()
@@ -77,19 +77,19 @@ namespace GuessTheWordServer
                 OnMessageRecieved(ip, initialRequest.ToJsonString());
             Player player = new Player(initialRequest.PlayerId, tcpClient);
             AddNewPlayer(player, tcpClient);
-           
+
             while ((received = stream.Read(buffer)) > 0)
             {
                 var request = buffer.DeserializeReqMsg();
                 if (OnMessageRecieved != null)
                     OnMessageRecieved(ip, request.ToJsonString());
-               
+
                 RequestSwitcher(request);
             }
             if (OnMessageRecieved != null)
                 OnMessageRecieved(ip, "Disconnected");
             _clients.Remove(tcpClient);
-            RemovePlayer(player);   
+            RemovePlayer(player);
         }
 
         private void AddNewPlayer(Player p, TcpClient tcpClient)
